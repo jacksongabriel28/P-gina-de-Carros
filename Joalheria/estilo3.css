@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body{
+
+background-color: #eff6e0;
+
+
+
+}
+
+
+.forms{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  text-align: center;
+  color: #090f13;
+}
+
+h1{
+
+    
+    font-size: 40px;
+}
+

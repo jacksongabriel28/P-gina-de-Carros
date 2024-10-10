@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="perfil.png" type="image/x-icon">
+
+    
+</head>
+<body>
+    <main>
+        <nav>
+
+
+            <a class="icone" href="principal.html">Voltar</a>
+
+
+            <div class="forms">
+                <form action="">
+                    <h1>Faça login</h1>
+                <ul>    
+                <img src="logoempresa-removebg-preview.png" height="150">
+                </ul> 
+                    <label for="Usuario">Usuário</label>
+                    <input type="text" id="Usuario" name="Usuário">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha">
+                    <input type="button" value="entrar" onclick="login()">
+                </form>
+                <a href="segundo.html" target="_blank">Registrar-se</a>
+                <a href="terceiro.html" target="_blank">Esqueceu a senha</a>
+            </div>
+        </nav>
+    </main> 
+
+   <script>
+
+        var usuarioCriado = localStorage.getItem("usuarioCriado")
+        var senhaCriada = localStorage.getItem("senhaCriada") //localStorage guarda os dados no navegador
+
+      function login() { //só vai funcionar se clicar no botão LOGIN 
+        var usuario = document.getElementById("Usuario").value;
+        var senha = document.getElementById("senha").value; //variaveis de usuario e senha
+
+        if (usuario == usuarioCriado && senha == senhaCriada){
+            alert("Senha Correta")
+            window.location.href = "agosto.html";
+        } else if (usuario === "admin" && senha === "123") {
+                window.location.href = "agosto.html"; // Manda se os dados estiverem corretos
+        } else {
+            alert("Usuario ou Senha incorretas") //emite um alerta
+        }
+        } 
+
+
+   </script>
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #eea19b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    main {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        margin-top: 10px;
+        color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 97%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 90px;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #e7aaa5;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="button"]:hover {
+        background-color: #d79d98;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    ul{
+        text-align: center;
+    }
+    .icone {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        color: #eea19b;
+        text-decoration: none;
+   
+}
+</style>
+</body>
+</html>
+
